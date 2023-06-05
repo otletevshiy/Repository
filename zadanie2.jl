@@ -9,14 +9,4 @@ function perimeter!(robot)
         end
     end
 end
-
-function corner!(robot)
-    while !isborder(robot, Sud)
-        move!(robot, Sud)
-    end
-    while !isborder(robot, West)
-        move!(robot, West)
-    end
-end
 perimeter!(r)
-corner!(r)
