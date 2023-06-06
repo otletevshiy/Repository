@@ -13,4 +13,3 @@ function corner!(robot)
         move!(robot, Ost)
     end
 end
-inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
