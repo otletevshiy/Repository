@@ -10,6 +10,6 @@ function corner!(robot)
         move!(robot, Sud)
     end
     while !isborder(robot, West)
-        move!(robot, Ost)
+        move!(robot, West)
     end
 end
