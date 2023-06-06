@@ -4,7 +4,6 @@ function around!(robot)
    corner!(robot)
 end
 
-
 function corner!(robot)
     while !isborder(robot, Sud)
         move!(robot, Sud)
