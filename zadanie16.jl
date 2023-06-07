@@ -18,4 +18,5 @@ function spiral!(stop_condition::Function,robot)
         end
     end
 end
+
 right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) 
