@@ -16,6 +16,5 @@ function along!(robot,side,n_steps)
 end
 
 
-left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) 
 right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 1 , 4)) 
 inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2 , 4))
