@@ -1,6 +1,5 @@
 using HorizonSideRobots
-
-
+r=Robot(15,15; animate=true)
 function cross_move(robot, side_x, side_y)
     num_step = 0
     while !isborder(robot, side_x) && !isborder(robot, side_y)
@@ -37,5 +36,4 @@ function plus!(robot)
     end
     putmarker!(robot)
 end
-
-plus!(Robot("fr.sit", animate=true))
+plus!(r)
