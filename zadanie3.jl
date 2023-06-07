@@ -13,4 +13,5 @@ function full!(robot)
         end
     end
 end
+inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
 full!(r)
