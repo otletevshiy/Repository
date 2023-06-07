@@ -44,5 +44,4 @@ function count_partitions(robot)
     end
     return count_total
 end
-
 inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
