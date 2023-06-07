@@ -1,4 +1,4 @@
-function draw_chess_square!(robot, n)
+function draw_chess_square!(robot, n)   #Функция закрашивает поле в шахматном порядке
     staggered_order = 0
     side = Ost
     for _i in 1:n
@@ -25,4 +25,4 @@ function draw_chess_square!(robot, n)
     end
 end
 
-inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
+inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)    #Функция меняет направление на противоположное
