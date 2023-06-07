@@ -58,5 +58,4 @@ function along!(robot, num_Sud, num_Ost, side_back)
         move!(robot,side_back)
     end
 end
-
 inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
