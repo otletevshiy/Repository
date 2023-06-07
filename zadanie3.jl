@@ -1,6 +1,6 @@
 using HorizonSideRobots
 r=Robot(15,15; animate=true)
-function full!(robot)
+function full!(robot)  #Функция полностью закрашивает поле
     putmarker!(robot)
     side = Ost;
     while !isborder(robot, side)
@@ -13,5 +13,5 @@ function full!(robot)
         end
     end
 end
-inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
+inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)   #Функция меняет сторону на противоположную
 full!(r)
