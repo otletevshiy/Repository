@@ -1,4 +1,4 @@
-function find_marker!(robot) 
+function find_marker!(robot)    #Функция находит маркер на поле для робота, а переменная k определяет какое количество строк и столбцов робот должен пройти перед обнаружением маркера
     k=0
     side=Nord
     while (!ismarker(robot))
@@ -9,8 +9,8 @@ function find_marker!(robot)
       k+=1
     end
   end
-  
-  function along!(side,num_steps,robot)
+   
+  function along!(side,num_steps,robot)   #Функция перемещает робота наnum_steps шагов в направлении заданной переменной side
     for _i in 1:num_steps
       if (!ismarker(robot))
         move!(robot,side)
@@ -19,8 +19,8 @@ function find_marker!(robot)
   end
   
   
-  function solve!(robot)
+  function solve!(robot)  #Функция вызывает функцуию find_marker!
   find_marker!(robot)
   end
   
-  right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+1, 4))
+  right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+3, 4))  #Функция меняет сторону на сторону справа по часовой стрелке
