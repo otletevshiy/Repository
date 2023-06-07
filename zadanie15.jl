@@ -21,3 +21,4 @@ end
 
 inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2 , 4)) 
 right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) 
+left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 1 , 4)) 
