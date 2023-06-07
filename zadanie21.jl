@@ -9,4 +9,4 @@ function double_dist!(robot,side)
         end
     end
 end
-inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2, 4))
+inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2, 4)
