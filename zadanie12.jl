@@ -1,5 +1,5 @@
 using HorizonSideRobots
-function count_partitions(robot)
+function count_partitions(robot)   #Функция
     side = Ost
     count = 0
     count_check = 0
@@ -28,4 +28,4 @@ function count_partitions(robot)
     return count_total
 end
 
-inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
+inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)   #Функция меняет направление на противоположное
