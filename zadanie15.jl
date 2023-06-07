@@ -18,5 +18,6 @@ function along!(robot,side,n_steps)
         move!(robot,side)
     end
 end
+
 inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2 , 4)) 
 right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) 
