@@ -1,4 +1,4 @@
-function find_marker!(robot)
+function find_marker!(robot)    #Функция находит маркер на поле
     num_step=1
     side=Nord
     while !ismarker(robot)
@@ -10,7 +10,7 @@ function find_marker!(robot)
     end
 end
 
-function marker_is_find!(robot, side, num_step)  
+function marker_is_find!(robot, side, num_step)    #Функция проверяет, есть ли маркер на текущей клетке поля, если маркер есть то функция завершается, если нет то робот продолжает движение
     for _i in 1:num_step   
         if !ismarker(r)
             move!(robot,side)
@@ -19,4 +19,4 @@ function marker_is_find!(robot, side, num_step)
         end 
     end
 end
-next(side::HorizonSide) = HorizonSide((Int(side) +1)% 4)
+next(side::HorizonSide) = HorizonSide((Int(side) +1)% 4)   #Функция меняет сторону на следующую против часовой стрелке
