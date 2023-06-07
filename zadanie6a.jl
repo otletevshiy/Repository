@@ -4,7 +4,6 @@ function drip(robot::Robot)
     move!(robot::Robot,back_path::Vector{NamedTuple{(:side, :num_steps), Tuple{HorizonSide,Int}}})
     
 end
-
 function move_to_angle!(robot, angle=(Sud,West))
     back_path = NamedTuple{(:side, :num_steps), Tuple{HorizonSide,Int}}[] 
     while !isborder(robot,angle[1]) || !isborder(robot, angle[2])
