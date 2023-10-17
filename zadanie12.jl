@@ -1,5 +1,5 @@
 using HorizonSideRobots
-function count_partitions(robot)   #Функция
+function count_partitions(robot)   #Функция...
     side = Ost
     count = 0
     count_check = 0
