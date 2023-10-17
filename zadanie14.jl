@@ -12,7 +12,7 @@ function along!(robot, side)    #Функия вызывает функцию tr
     end
 end
 
-function snake!(robot, side)   #
+function snake!(robot, side)   #Функция пытается двигаться в заданном направлении, если не получается меняет его на противоположное
     along!(robot, side)
     while try_move!(robot, side)
         side = inverse(side)
