@@ -44,4 +44,4 @@ function along!(robot::Robot,side,n)
         move!(robot::Robot,side)
     end
 end
-inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+2, 4))
+inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+2, 4))  #Функция меняет сторону на противоположную
