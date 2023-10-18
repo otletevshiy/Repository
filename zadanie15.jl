@@ -13,12 +13,12 @@ function find_window!(stop_condition::Function,robot,side)
         side = inverse(side)
     end
 end
-function along!(robot,side,n_steps)
+function along!(robot,side,n_steps) #Эта функция перемещает робота вдоль стороны side на указанное количество шагов n_steps
     for _ in 1:n_steps
         move!(robot,side)
     end
 end
 
-inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2 , 4)) 
-right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) 
-left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 1 , 4)) 
+inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 2 , 4)) #Эта функция возвращает противоположное направление горизонтальной стороны
+right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) #
+left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 1 , 4)) #
