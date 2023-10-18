@@ -18,5 +18,5 @@ function step!(robot,side) #В этой функции если робот не 
     end
 end
 
-right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3, 4))
-left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 1, 4))
+right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3, 4))#Функция меняет сторону на сторону справа по часовой стрелке
+left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 1, 4))#Функция меняет сторону на сторону слева по часовой стрелке
