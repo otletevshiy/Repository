@@ -97,6 +97,6 @@ perimetr!(robot)
 go_home!(robot, num_steps_Sud, num_steps_West)
 end
 
-right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+3, 4))
-left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+1, 4))
-inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+2, 4))
+right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+3, 4))  #Функция меняет сторону на другую сторону которая находится справа по часовой стрелке
+left(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+1, 4))  #Функция меняет сторону на другую сторону которая находится слева по часовой стрелке
+inverse(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side)+2, 4)) #Функция меняет сторону на противоположную
