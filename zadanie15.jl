@@ -1,11 +1,11 @@
-function find_window_major!(robot,side)
+function find_window_major!(robot,side) #Сначала функция проверяет, есть ли граница справа от текущей позиции робота.Если граница справа есть, она вызывает функцию find_window! для поиска окна в этом направлении.Если справа нет границы, она проверяет, есть ли граница слева от текущей позиции робота, используя isborder(robot, left(side)). Если граница слева есть, она также вызывает find_window! для поиска окна в этом направлении.
     if isborder(robot,right(side))
         find_window!(()->isborder(robot,right(side)),robot,side)
     elseif isborder(robot,left(side))
         find_window!(()->isborder(robot,left(side)),robot,side)
     end
 end
-function find_window!(stop_condition::Function,robot,side)
+function find_window!(stop_condition::Function,robot,side) #Функция двигает робота в определенном направлении до тех пор, пока условие stop_condition не возвращает false.Она увеличивает количество шагов при каждом движении и затем возвращает это количество, представляя тем самым расстояние (в шагах), которое робот прошел, прежде чем был остановлен условием stop_condition.
     n = 0
     while stop_condition()
         n+=1
