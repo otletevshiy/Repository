@@ -1,4 +1,4 @@
-function spiral!(stop_condition::Function,robot)
+function spiral!(stop_condition::Function,robot) #Функция двигает робота в спиральном образе вокруг начальной точки. Робот сначала двигается на одну клетку в направлении севера, затем поворачивается на 90 градусов вправо и двигается на две клетки, затем снова поворачивается и двигается на три клетки, и так далее, увеличивая количество шагов на каждой итерации. Функция продолжает двигаться в спиральном образе, пока условие stop_condition не вернет true.
     a = true
     num_steps = 1
     check_steps = 0
@@ -19,4 +19,4 @@ function spiral!(stop_condition::Function,robot)
     end
 end
 
-right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) 
+right(side::HorizonSide)::HorizonSide = HorizonSide(mod(Int(side) + 3 , 4)) #Функция меняет сторону на сторону справа по часовой стрелке
