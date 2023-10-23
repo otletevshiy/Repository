@@ -42,7 +42,7 @@ function along_putm!(robot,side) #: Эта функция двигает роб�
         putmarker!(robot)
     end
 end
-function numsteps_along!(robot,side) #
+function numsteps_along!(robot,side) #Эта функция возвращает количество шагов, которое робот сможет сделать вдоль заданного направления, не сталкиваясь с границей.
     n_steps = 0
     while !isborder(robot,side)
         move!(robot,side) 
@@ -50,7 +50,7 @@ function numsteps_along!(robot,side) #
     end
     return n_steps
 end
-function along!(robot,side,n) #
+function along!(robot,side,n) #Эта функция двигает робота вдоль заданного направления на указанное количество шагов.
     for _ in 1:n
         move!(robot,side)
     end
