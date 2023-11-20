@@ -1,0 +1,25 @@
+using HorizonSideRobots
+r=Robot(15,15; animate=true)
+
+function vse!(robot)
+    putmarker!(robot)
+    side = Ost;
+    row!(robot,side)
+    while !isborder(robot, Nord) 
+        move!(robot, Nord)
+        putmarker!(robot)
+        side = inverse(side)
+        row!(robot,side)
+    end
+end
+
+function row!(robot,side)
+    side = Ost;
+    if !isborder(robot, side)
+        move!(robot, side)
+        putmarker!(robot)
+    end
+end
+
+inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
+vse!(robot)
